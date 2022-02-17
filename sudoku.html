@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<title>SUDOKU</title>
+<head>
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<script src = "sudoku.js"></script>
+<body>
+    <h1>SUDOKU</h1>
+    <br>
+    <div>
+        <div class = "buttons firstRow">
+            <input maxlength="1" class = "grid1" contentEditable=true id="a1">
+            <input maxlength="1" class = "grid1" contentEditable=true id="a1">
+            <input maxlength="1" class = "grid1" contentEditable=true id="a3">
+            <input maxlength="1" class = "grid2" contentEditable=true id="a4">
+            <input maxlength="1" class = "grid2" contentEditable=true id="a5">
+            <input maxlength="1" class = "grid2" contentEditable=true id="a6">
+            <input maxlength="1" class = "grid3" contentEditable=true id="a7">
+            <input maxlength="1" class = "grid3" contentEditable=true id="a8">
+            <input maxlength="1" class = "grid3" contentEditable=true id="a9">
+        </div>
+        <div class = "buttons secondRow">
+            <input maxlength="1" class = "grid1" contentEditable=true id="b1">
+            <input maxlength="1" class = "grid1" contentEditable=true id="b2">
+            <input maxlength="1" class = "grid1" contentEditable=true id="b3">
+            <input maxlength="1" class = "grid2" contentEditable=true id="b4">
+            <input maxlength="1" class = "grid2" contentEditable=true id="b5">
+            <input maxlength="1" class = "grid2" contentEditable=true id="b6">
+            <input maxlength="1" class = "grid3" contentEditable=true id="b7">
+            <input maxlength="1" class = "grid3" contentEditable=true id="b8">
+            <input maxlength="1" class = "grid3" contentEditable=true id="b9">
+        </div>
+        <div class = "buttons thirdRow">
+            <input maxlength="1" class = "grid1" contentEditable=true id="c1">
+            <input maxlength="1" class = "grid1" contentEditable=true id="c2">
+            <input maxlength="1" class = "grid1" contentEditable=true id="c3">
+            <input maxlength="1" class = "grid2" contentEditable=true id="c4">
+            <input maxlength="1" class = "grid2" contentEditable=true id="c5">
+            <input maxlength="1" class = "grid2" contentEditable=true id="c6">
+            <input maxlength="1" class = "grid3" contentEditable=true id="c7">
+            <input maxlength="1" class = "grid3" contentEditable=true id="c8">
+            <input maxlength="1" class = "grid3" contentEditable=true id="c9">
+        </div>
+        <div class = "buttons fourthRow">
+            <input maxlength="1" class = "grid4" contentEditable=true; id="d1">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="d2">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="d3">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="d4">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="d5">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="d6">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="d7">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="d8">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="d9">
+        </div>
+        <div class = "buttons fifthRow">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="e1">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="e2">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="e3">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="e4">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="e5">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="e6">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="e7">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="e8">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="e9">
+        </div>
+        <div class = "buttons sixthRow">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="f1">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="f2">
+            <input maxlength="1"; class = "grid4" contentEditable=true; id="f3">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="f4">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="f5">
+            <input maxlength="1"; class = "grid5" contentEditable=true; id="f6">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="f7">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="f8">
+            <input maxlength="1"; class = "grid6" contentEditable=true; id="f9">
+        </div>
+        <div class = "buttons seventhRow">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="g1">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="g2">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="g3">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="g4">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="g5">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="g6">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="g7">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="g8">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="g9">
+        </div>
+        <div class = "buttons eighthRow">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="h1">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="h2">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="h3">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="h4">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="h5">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="h6">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="h7">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="h8">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="h9">
+        </div>
+        <div class = "buttons ninthRow">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="i1">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="i2">
+            <input maxlength="1"; class = "grid7" contentEditable=true; id="i3">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="i4">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="i5">
+            <input maxlength="1"; class = "grid8" contentEditable=true; id="i6">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="i7">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="i8">
+            <input maxlength="1"; class = "grid9" contentEditable=true; id="i9">
+        </div>
+    </div>   
+</body>

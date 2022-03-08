@@ -1,2 +1,2 @@
 # Sudoku
-A sudoku web application.
+A sudoku web application. (WIP)

@@ -1,3 +1,3 @@
 # Sudoku
-A sudoku web application.
 ![alt text](PreviewImage.png)
+A sudoku web application. (WIP)

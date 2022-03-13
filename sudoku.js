@@ -30,8 +30,6 @@ function updateValue(e) {
   log.textContent = e.target.value;
 }
 
-
-
 let puzzle = [...Array(9)].map(e => Array(9));
 
 

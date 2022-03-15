@@ -1,7 +1,29 @@
+import java.io.FileInputStream;  
+import java.io.IOException;  
+import org.apache.poi.hssf.usermodel.HSSFSheet;  
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;  
+import org.apache.poi.ss.usermodel.Cell;  
+import org.apache.poi.ss.usermodel.FormulaEvaluator;  
+import org.apache.poi.ss.usermodel.Row;
+
 public class SudokuSolver {
     public static void main(String[] args) {
-        int[][] test;
-        System.out.println(isValidWithinBoxes(test));
+        try {
+            File file = new File("ExcelLibrary/Sudoku Puzzle.xls");
+            FileInputStream fs = new FileInputStream(file);
+            HSSFWorkbook wb = new HSSFWorkbook(fs);
+            HSSFSheet sheet = wb.getSheetAt(0);
+            //HSSFRow row;
+            //HSSFCell cell;
+        
+            int rows; // No of rows
+            rows = sheet.getPhysicalNumberOfRows();
+        
+            System.out.print(rows);
+        } catch(Exception ioe) {
+            ioe.printStackTrace();
+        }
+        //System.out.println(isValidWithinBoxes(test));
         
     }
     /* 

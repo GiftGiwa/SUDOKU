@@ -28,3 +28,4 @@ function assign(N) {
     }
     console.log(puzzle)
 }
+

@@ -63,6 +63,11 @@ input:hover {
     transition-duration: 0.2s;
     cursor: pointer;
 }
+.container {
+    text-align: center;
+    padding: 0px;
+    margin:0px;
+}
 input {
     height:50px;
     width:50px;

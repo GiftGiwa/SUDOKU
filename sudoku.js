@@ -1,4 +1,4 @@
-let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled
+let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled as values are typed im
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"] //labels for ROWS of puzzle
@@ -12,6 +12,27 @@ inputs.forEach( function (input) {
         assign(e)  
     });
 })
+//let test_puzzles = []
+/*test_puzzles.push( [[8,3,5,4,1,6,9,2,7],
+                    [2,9,6,8,5,7,4,3,1],
+                    [4,1,7,2,9,3,6,5,8],
+                    [5,6,9,1,3,4,7,8,2],
+                    [1,2,3,6,7,8,5,4,9],
+                    [7,4,8,5,2,9,1,6,3],
+                    [6,5,2,7,8,1,3,9,4],
+                    [9,8,1,3,4,5,2,7,6],
+                    [3,7,4,9,6,2,8,1,5]] )*/
+
+let test_puzzles = []
+test_puzzles.push("[004300209005009001070060043006002087190007400050083000600000105003508690042910300]")
+//numbers.push(040100050107003960520008000000000017000906800803050620090060543600080700250097100)
+//numbers.push(600120384008459072000006005000264030070080006940003000310000050089700000502000190)
+//numbers.push(497200000100400005000016098620300040300900000001072600002005870000600004530097061)
+test_puzzles[0] = test_puzzles[0].substring(1, test_puzzles[0].length - 2)
+console.log(test_puzzles[0])
+let test_array = [...Array(9)].map(e => Array(9)) //testing assigning unsolved numbers to 2x2 array from excel sheet
+
+//document.getElementById("cantidadCopias").disabled = true; //<-- that's for later
 
 const check = document.getElementById("check")
 check.addEventListener('click', (e) => { //events when "check" button is clicked

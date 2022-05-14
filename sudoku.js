@@ -2,6 +2,20 @@ let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled a
 
 let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"] //part of labels for ROWS of puzzle
 
+
+
+
+/*await Excel.run(async (context) => {
+    let sheet = context.workbook.worksheets.getItem("Sample");
+    let cell = sheet.getCell(1, 4);
+    cell.load("address, values");
+
+    await context.sync();
+    console.log(`The value of the cell in row 2, column 5 is "${cell.values[0][0]}" and the address of that cell is "${cell.address}"`);
+});*/
+
+
+//UPDATING ARRAY OF ENTRIES AS USER TYPES
 const inputs = document.querySelectorAll('.buttons')  
 inputs.forEach( function (input) {
     input.addEventListener('input', (e) => {  
@@ -39,6 +53,26 @@ function initialize() {
     }
 }
 
+function presetTest() { //test CHECK button with completed puzzle
+    let count = 0
+    test = "[864371259325849761971265843436192587198657432257483916689734125713528694542916378]"
+    test = test.substring(1, test.length - 2)
+    for (let i = 0; i < puzzle.length; i++) {
+        for (let j = 0; j < puzzle[0].length; j++) {
+            let num = Number(test.charAt(count))
+            if (num != 0)  {
+                document.getElementById(letters[i] + (j + 1)).value = num
+                document.getElementById(letters[i] + (j + 1)).disabled = true
+                document.getElementById(letters[i] + (j + 1)).classList.remove("has_hover")
+                puzzleAssign(document.getElementById(letters[i] + (j + 1)))
+            }
+            count++
+        }
+    }
+}
+
+//presetTest() // <-- runs the above function
+
 function inputAssign(N) { //assigns values to a 2x2 array corresponding to the numbers inputted by user
     let ID = String(N.target.id)
     let coordinate1 = letters.indexOf(ID.substring(0, 1))
@@ -67,11 +101,13 @@ document.getElementById("check").addEventListener('click', (e) => { //events whe
         alert("WRONG") // to be updated
 })
 
+
 //GENERATE BUTTON
 
 document.getElementById("generate").addEventListener('click', (e) => { //events when "generate" button is clicked
     alert("test") // to be updated
 })
+
 
 //CHECKING ENTRIES
 

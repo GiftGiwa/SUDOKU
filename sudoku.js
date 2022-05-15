@@ -10,9 +10,9 @@ let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
 //16,383 puzzles to choose from!
 
-let i = parseInt(Math.random() * puzzle_arr.length)
+let a = parseInt(Math.random() * puzzle_arr.length)
 
-initialize(i) //when the "generate" button is pressed, this function is called
+initialize(a) //when the "generate" button is pressed, this function is called
 
 //initialize(Math.random(0, *number of puzzles in file*))
 
@@ -88,6 +88,8 @@ document.getElementById("generate").addEventListener('click', (e) => { //events 
     for (let i = 0; i < puzzle.length; i++) {
         for (let j = 0; j < puzzle[0].length; j++) {
             document.getElementById(letters[i] + (j + 1)).value = ""
+            document.getElementById(letters[i] + (j + 1)).disabled = false
+            document.getElementById(letters[i] + (j + 1)).classList.add("has_hover")
         }
     } 
     let n = parseInt(Math.random() * puzzle_arr.length)

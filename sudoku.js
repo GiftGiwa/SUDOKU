@@ -1,4 +1,4 @@
-
+import { puzzle_arr } from "./puzzles.js"
 
 let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled as values are typed in
 
@@ -8,24 +8,20 @@ let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
 */
 
+//16,383 puzzles to choose from!
 
+let i = parseInt(Math.random() * puzzle_arr.length)
 
-let test_puzzles = []
-test_puzzles.push("[004300209005009001070060043006002087190007400050083000600000105003508690042910300]")
-//numbers.push(040100050107003960520008000000000017000906800803050620090060543600080700250097100)
-
-test_puzzles[0] = test_puzzles[0].substring(1, test_puzzles[0].length - 2)
-
-initialize() //when the "generate" button is pressed, this function is called
+initialize(i) //when the "generate" button is pressed, this function is called
 
 //initialize(Math.random(0, *number of puzzles in file*))
 
 //ADDING UNSOLVED SUDOKU TO PAGE
-function initialize() {
+function initialize(n) {
     let count = 0
     for (let i = 0; i < puzzle.length; i++) {
         for (let j = 0; j < puzzle[0].length; j++) {
-            let num = Number(test_puzzles[0/**/].charAt(count))
+            let num = Number(puzzle_arr[n].charAt(count))
             if (num != 0)  {
                 document.getElementById(letters[i] + (j + 1)).value = num
                 document.getElementById(letters[i] + (j + 1)).disabled = true
@@ -89,7 +85,13 @@ document.getElementById("check").addEventListener('click', (e) => { //events whe
 //GENERATE BUTTON
 
 document.getElementById("generate").addEventListener('click', (e) => { //events when "generate" button is clicked
-    alert("test") // to be updated
+    for (let i = 0; i < puzzle.length; i++) {
+        for (let j = 0; j < puzzle[0].length; j++) {
+            document.getElementById(letters[i] + (j + 1)).value = ""
+        }
+    } 
+    let n = parseInt(Math.random() * puzzle_arr.length)
+    initialize(n) // to be updated
 })
 
 

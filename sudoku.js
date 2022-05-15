@@ -1,34 +1,18 @@
+
+
 let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled as values are typed in
 
-let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"] //part of labels for ROWS of puzzle
+let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"] 
+/* ^part of labels for ROWS of puzzle; the index of each letter would be the index of the
+ * row each number would be located in
+
+*/
 
 
-
-
-/*await Excel.run(async (context) => {
-    let sheet = context.workbook.worksheets.getItem("Sample");
-    let cell = sheet.getCell(1, 4);
-    cell.load("address, values");
-
-    await context.sync();
-    console.log(`The value of the cell in row 2, column 5 is "${cell.values[0][0]}" and the address of that cell is "${cell.address}"`);
-});*/
-
-
-//UPDATING ARRAY OF ENTRIES AS USER TYPES
-const inputs = document.querySelectorAll('.buttons')  
-inputs.forEach( function (input) {
-    input.addEventListener('input', (e) => {  
-        let value = Number(e.target.value)
-        inputAssign(e)  
-    });
-})
 
 let test_puzzles = []
 test_puzzles.push("[004300209005009001070060043006002087190007400050083000600000105003508690042910300]")
 //numbers.push(040100050107003960520008000000000017000906800803050620090060543600080700250097100)
-//numbers.push(600120384008459072000006005000264030070080006940003000310000050089700000502000190)
-//numbers.push(497200000100400005000016098620300040300900000001072600002005870000600004530097061)
 
 test_puzzles[0] = test_puzzles[0].substring(1, test_puzzles[0].length - 2)
 

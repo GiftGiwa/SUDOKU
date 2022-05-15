@@ -5,16 +5,11 @@ let puzzle = [...Array(9)].map(e => Array(9)); //array of numbers to be filled a
 let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"] 
 /* ^part of labels for ROWS of puzzle; the index of each letter would be the index of the
  * row each number would be located in
-
 */
 
-//16,383 puzzles to choose from!
-
-let a = parseInt(Math.random() * puzzle_arr.length)
+let a = parseInt(Math.random() * puzzle_arr.length) // index of randomly selected puzzle
 
 initialize(a) //when the "generate" button is pressed, this function is called
-
-//initialize(Math.random(0, *number of puzzles in file*))
 
 //ADDING UNSOLVED SUDOKU TO PAGE
 function initialize(n) {

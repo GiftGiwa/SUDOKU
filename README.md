@@ -1,2 +1,2 @@
-# [Sudoku](https://giftgiwa.github.io/Sudoku/index.html)
+# [Sudoku](https://giftgiwa.github.io/Sudoku/sudoku.html)
 My first formal programming project, a sudoku web application. Built in JavaScript, HTML, and CSS, it randomly selects from an array of over 16,000 81-digit values (with each value equaling a square space in the sudoku puzzle, and 0 representing an empty space) that will be implemented into the frontend for users to fill in. The user can then call another puzzle, or check their entries for whether they form a valid solution or not.
